@@ -84,3 +84,7 @@ fx.setText(grammar.flatten("#origin#"));
 document.onclick= function(event) {
     fx.setText(grammar.flatten("#origin#"));
 };
+
+particlesJS.load('particlesholder', 'particles.json', function() {
+  console.log('callback - particles.js config loaded');
+});

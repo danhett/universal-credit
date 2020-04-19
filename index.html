@@ -1,11 +1,11 @@
 <head>
     <title>UC KILLS PEOPLE</title>
     <style>
-        @import 'https://fonts.googleapis.com/css?family=Roboto+Condensed:100';
+        @import 'https://fonts.googleapis.com/css?family=Roboto+Mono:100';
         html,
         body {
-          font-family: 'Roboto Condensed', monospace;
-          background: #212121;
+          font-family: 'Roboto Mono', monospace;
+          background: #000000;
           height: 100%;
         }
         .container {
@@ -21,9 +21,14 @@
           width:50%;
           color: #fafafa;
           align:center;
+          position:absolute;
+
         }
         .dud {
-          color: #757575;
+            color: #87CEEB;
+        }
+        #particlesholder {
+            width:100%;
         }
 
     </style>
@@ -31,9 +36,11 @@
 
 <body>
     <div class="container">
+        <div id="particlesholder"></div>
         <div class="text"></div>
     </div>
 
+    <script src="js/particles/particles.min.js"></script>
     <script src="js/vendor/jquery.min.js"></script>
 	<script src="js/vendor/seedrandom.js"></script>
 	<script src="js/tracery/mods-eng-basic.js"></script>
