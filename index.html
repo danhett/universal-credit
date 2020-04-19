@@ -1,43 +1,17 @@
 <head>
-    <title>UC KILLS PEOPLE</title>
-    <style>
-        @import 'https://fonts.googleapis.com/css?family=Roboto+Mono:100';
-        html,
-        body {
-          font-family: 'Roboto Mono', monospace;
-          background: #000000;
-          height: 100%;
-        }
-        .container {
-          height: 100%;
-          width: 100%;
-          justify-content: center;
-          align-items: center;
-          display: flex;
-        }
-        .text {
-          font-weight: 100;
-          font-size: 28px;
-          width:50%;
-          color: #fafafa;
-          align:center;
-          position:absolute;
-
-        }
-        .dud {
-            color: #87CEEB;
-        }
-        #particlesholder {
-            width:100%;
-        }
-
-    </style>
+    <title>UC DATA</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
+    <!-- <div id="particlesholder"></div> -->
+
     <div class="container">
-        <div id="particlesholder"></div>
-        <div class="text"></div>
+        <div id="textHolder">
+            <div class="headertext"></div>
+            <br>
+            <div class="storytext"></div>
+        </div>
     </div>
 
     <script src="js/particles/particles.min.js"></script>
@@ -45,5 +19,7 @@
 	<script src="js/vendor/seedrandom.js"></script>
 	<script src="js/tracery/mods-eng-basic.js"></script>
 	<script src="js/tracery/tracery.js"></script>
+    <script src="js/Scrambler.js"></script>
+    <script src="js/Grammars.js"></script>
     <script src="js/Main.js"></script>
 </body>
