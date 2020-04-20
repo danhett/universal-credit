@@ -20,6 +20,14 @@ document.onclick= function(event) {
 };
 
 function doUpdate() {
-    storyfx.setText(storygrammar.flatten("#origin#"));
     headerfx.setText(headergrammar.flatten("#origin#"));
+
+    // 2.8 mill + 1.4 mill = 4.2 mill total
+
+    var test = Math.random();
+    console.log(test * 4.2);
+    if(test * 4.2 < 2.8)
+        storyfx.setText(storygrammar.flatten("#origin#"));
+    else
+        storyfx.setText(storygrammar.flatten("#origin#"));
 }
