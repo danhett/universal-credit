@@ -13,9 +13,15 @@ body {
   align-items: center;
   display: flex;
 }
+.storyintro {
+  font-size: 1.2em;
+  width:80%;
+  padding-left: 50px;
+  color: #fafafa;
+}
 .storytext {
   font-size: 1.2em;
-  width:50%;
+  width:80%;
   padding-left: 50px;
   color: #fafafa;
 }
@@ -29,7 +35,7 @@ body {
 .subtext {
   font-weight: 100;
   font-size: 1.2em;
-  width:50%;
+  width:80%;
   padding-left: 50px;
   color: #00EEEE;
 }

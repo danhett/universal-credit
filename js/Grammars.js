@@ -22,9 +22,26 @@ var times = {
 
 // generic human grammar for descriptions and scenarios
 var generic = {
-    origin:["#intro# #subintro#"],
-    intro:["Okay, where do I start.", "This is my story.", "Here's how it is for us."],
-    subintro:["I'm married with two kids.", "I'm recently divorced.", "I live with my partner."]
+    origin:[    "#intro# #status#. #fulllocation#. #flavour#.",
+                "#intro# I've #livedin# #actualplace# for #time#. #flavour#.",
+                "#flavour#. I've #livedin# #actualplace# for #time#. #status#."],
+
+    intro:["Okay, where do I start...", "This is my story.", "Here's how it is for us.", "This is the short version I suppose:", "Alright well:", "It's the same old story.", "Stop me if you've heard this one before.", "My story isn't too special.", "I'll start at the beginning.", "OK."],
+    status:["I'm #maritalstatus# with #kidcount#"],
+    maritalstatus:["single", "married", "newly single", "newly married", "recently divorced", "divorced", "separated", "living alone", "blissfully single", "happily married", "painfully single", "in a long term relationship"],
+    kidcount:["no kids", "one kid", "two kids", "three kids", "one child", "two children", "three children", "a few kids", "no children, thankfully", "zero children, and staying that way", "no kids", "one young child", "two young kids"],
+    fulllocation:["I #how# a #housetype# in #actualplace#", "I #how# a #housetype# #placedescription#", "I'm in #actualplace#, in a #housetype#", "I'm #placedescription#, in a #housetype#"],
+    how:["rent", "own", "share", "live in", "currently live in", "just moved into"],
+    housetype:["little house", "modest place", "small house", "shitty house", "little flat", "nice little flat", "bedsit", "place", "home", "flat", "apartment", "two up, two down"],
+    placedescription:["in the centre of town", "in a small town", "in a quiet village", "near the city", "by the river", "near a busy road", "near my work", "just south of town", "on the outskirts of town", "in the suburbs", "in a nice part of town", "in a nice area", "in a rough area", "on the north side of the city"],
+    actualplace:["Manchester", "London", "Birmingham", "Sheffield", "Glasgow", "Newcastle", "Nottingham", "Liverpool", "Southend", "Bristol", "Edinburgh", "Brighton", "Bradford", "Leicester", "Sunderland", "Belfast", "Portsmouth", "Bournemouth", "Coventry", "Southampton", "Plymouth", "Luton", "Oxford", "Norwich", "York", "Ipswich", "Cambridge", "Bath", "Scarborough", "Huddersfield", "Stretford", "Stockport", "Preston", "Newbury", "Stafford", "Widnes", "Wigan", "Taunton", "Bedford", "Maidstone", "Torquay", "Islington", "Romford", "Ashton", "Derby", "Doncaster", "Newport", "Milton Keynes", "Dagenham", "Slough", "Lincoln", "Bromley", "Hyde", "Tameside", "Rochdale", "Bury", "Bolton", "Salford", "Warrington", "Tameside", "Altrincham", "Irlam", "Marple", "Cheadle", "Harrow", "Grimsby"],
+    livedin:["lived in", "been a resident of"],
+    time:["pfft... forever", "as long as I can remember", "years", "a few months", "a short while", "quite a while now", "a good few years", "a couple of months maybe", "a couple of years perhaps", "quite a long while, I forget exactly", "fucking ages", "far too long", "a short while", "about ten years now, it must be", "most of my life", "my whole life, pretty much", "what feels like forever", "barely any time at all"],
+    flavour:["Life #lifefeeling#", "Not much to say really", "I #frequency# feel #feeling# about #stuff#", "Not sure if this matters", "I keep myself to myself", "I'm sociable, outgoing", "I'm a quiet person generally", "Happiest when it's sunny", "Wish it rained less", "Prefer being outdoors", "Quite a social person", "Usually quite busy", "Away from home a lot", "Travel a lot for work", "Bit of a homebody", "Big family person", "Got a big family in the area", "Not from a big family", "Move around a lot"],
+    lifefeeling:["is okay here, really", "isn't bad here", "is up and down, but that's how it goes I suppose", "is mostly boring", "is a struggle", "is never boring here", "is decent, most of the time", "is good, all things considered", "is harder now", "is getting harder", "is pretty relentless", "is alright here", "is pretty good most of the time", "isn't bad really"],
+    frequency:["often", "mostly", "sometimes", "constantly", "usually", "rarely", "often", "typically", "largely"],
+    feeling:["okay", "anxious", "stressed", "sad", "happy", "up and down", "nothing", "emotionless", "emotional"],
+    stuff:["life", "my life", "the way things are", "the state of the world", "everything", "my situation", "the situation", "the state of things", "stuff in general"]
 }
 
 // grammars for cases pre-pandemic
@@ -34,5 +51,8 @@ var pre = {
 
 // grammars for cases post-pandemic
 var post = {
-    origin:["I'm new to universal credit and I'm not sure what's going to happen."]
+    origin:["Everything happened #speed#.", "My situation changed #speed#", "It's been #description# #feeling#"],
+    speed:["quickly", "rapidly", "super fast", "really quickly", "really rapidly", "instantly", "overnight", "almost overnight"],
+    description:["overwhelmingly", "enormously", "really", "insanely", "really fucking", "properly"],
+    feeling:["difficult", "confusing", "challenging", "stressful"]
 }

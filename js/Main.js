@@ -6,6 +6,8 @@ const headertext = document.querySelector('.headertext')
 const headerfx = new TextScramble(headertext)
 const headergrammar = tracery.createGrammar(nameGrammar);
 
+const introtext = document.querySelector('.storyintro')
+const introfx = new TextScramble(introtext)
 const storytext = document.querySelector('.storytext')
 const storyfx = new TextScramble(storytext)
 
@@ -34,11 +36,13 @@ function doUpdate() {
     var test = Math.random();
     console.log(test * 4.2);
     if(test * 4.2 < 2.8) {
-        storyfx.setText(genericgrammar.flatten("#origin#") + " " + pregrammar.flatten("#origin#"));
+        introfx.setText(genericgrammar.flatten("#origin#"));
+        storyfx.setText(pregrammar.flatten("#origin#"));
         subfx.setText(timegrammar.flatten("#long#"));
     }
     else  {
-        storyfx.setText(genericgrammar.flatten("#origin#") + " " + postgrammar.flatten("#origin#"));
+        introfx.setText(genericgrammar.flatten("#origin#"));
+        storyfx.setText(postgrammar.flatten("#origin#"));
         subfx.setText(timegrammar.flatten("#short#"));
     }
 }
