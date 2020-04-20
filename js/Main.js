@@ -8,7 +8,14 @@ const headergrammar = tracery.createGrammar(nameGrammar);
 
 const storytext = document.querySelector('.storytext')
 const storyfx = new TextScramble(storytext)
-const storygrammar = tracery.createGrammar(story);
+
+const subtext = document.querySelector('.subtext')
+const subfx = new TextScramble(subtext)
+
+const genericgrammar = tracery.createGrammar(generic);
+const timegrammar = tracery.createGrammar(times);
+const pregrammar = tracery.createGrammar(pre);
+const postgrammar = tracery.createGrammar(post);
 
 // create the grammar and first text update
 
@@ -26,8 +33,12 @@ function doUpdate() {
 
     var test = Math.random();
     console.log(test * 4.2);
-    if(test * 4.2 < 2.8)
-        storyfx.setText(storygrammar.flatten("#origin#"));
-    else
-        storyfx.setText(storygrammar.flatten("#origin#"));
+    if(test * 4.2 < 2.8) {
+        storyfx.setText(genericgrammar.flatten("#origin#") + " " + pregrammar.flatten("#origin#"));
+        subfx.setText(timegrammar.flatten("#long#"));
+    }
+    else  {
+        storyfx.setText(genericgrammar.flatten("#origin#") + " " + postgrammar.flatten("#origin#"));
+        subfx.setText(timegrammar.flatten("#short#"));
+    }
 }

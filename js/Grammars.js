@@ -10,19 +10,29 @@ var nameGrammar = {
     l:["A","B","C","D","E","F","G","H","J","K","L","M","N","P","R","S","T"]
 }
 
+// time based grammars
+var times = {
+    short:["TIME ON U.C: #shortmonths# month(s), #days# day(s)."],
+    long:["TIME ON U.C: #years# year(s), #months# month(s), #days# day(s)."],
+    years:["1", "2", "3", "4", "5", "6"],
+    shortmonths:["0", "1", "2", "3"],
+    months:["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"],
+    days:["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11","12", "13", "14", "15", "16", "17", "18", "19", "20", "21","22", "23", "24", "25", "26", "27"]
+}
+
+// generic human grammar for descriptions and scenarios
+var generic = {
+    origin:["#intro# #subintro#"],
+    intro:["Okay, where do I start.", "This is my story.", "Here's how it is for us."],
+    subintro:["I'm married with two kids.", "I'm recently divorced.", "I live with my partner."]
+}
+
+// grammars for cases pre-pandemic
 var pre = {
-    origin:["This is my story. #iam#"],
-    iam:["I am a 28 year old #person#"],
-    person:["example human."]
+    origin:["I've been stuck in the universal credit system for a long, long time."]
 }
 
+// grammars for cases post-pandemic
 var post = {
-    origin:["This is my story. #iam#"],
-    iam:["I am a 28 year old #person#"],
-    person:["example human."]
-}
-
-var story = {
-	origin: ["#intro#"],
-    intro: ["This is my story."],
+    origin:["I'm new to universal credit and I'm not sure what's going to happen."]
 }
