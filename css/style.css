@@ -34,5 +34,7 @@ body {
     color: #FF2222;
 }
 #particlesholder {
+    position: absolute;
     width:100%;
+    height:100%;
 }
