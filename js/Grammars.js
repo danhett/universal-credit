@@ -44,12 +44,16 @@ var generic = {
     stuff:["life", "my life", "the way things are", "the state of the world", "everything", "my situation", "the situation", "the state of things", "stuff in general"]
 }
 
+//-------------------------------------
 // grammars for cases pre-pandemic
+//-------------------------------------
 var pre = {
     origin:["I've been stuck in the universal credit system for a long, long time."]
 }
 
+//-------------------------------------
 // grammars for cases post-pandemic
+//-------------------------------------
 var post = {
     origin:["The #virusname# #blame#. #intro#.",
             "Everything happened #speed#. #intro#.",
@@ -62,8 +66,8 @@ var post = {
     description:["overwhelmingly", "enormously", "really", "insanely", "really fucking", "properly", "quite"],
     feeling:["difficult", "confusing", "challenging", "stressful"],
 
-    intro:["#usedto#. #stable#. #butthen# #whatnext#. #interim#. #progressed#",
-           "#usedto#. #ruminate#. #butthen# #whatnext#. #interim#. #progressed#"],
+    intro:["#usedto#. #stable#. #butthen# #whatnext#. #interim#. #progressed#. #lost#. #uc#",
+           "#usedto#. #ruminate#. #butthen# #whatnext#. #interim#. #progressed#. #lost# #uc#"],
 
     usedto:["Everything was okay to start with", "I had a fairly regular life", "My life was fairly average", "Nobody saw this coming", "We didn't see this coming, nobody did", "Things were fine, initially", "I guess I was complacent", "I had a pretty good life", "Things were looking up..."],
     stable:["I was self employed", "I was working nearby", "Job was going okay", "I was managing to pay the bills anyway", "Thought I had everything figured out", "I worked for myself", "Had plenty of work coming in", "I was working for a big company", "I worked a normal 9-5", "Working in the city was alright really", "My bills were being paid", "I had a few debts but nothing massive"],
@@ -80,4 +84,18 @@ var post = {
     jobname:["job", "position", "gig", "role"],
     safename:["safe", "secure", "sorted", "okay", "protected", "covered"],
     angry:["This was of course bullshit", "Absolute bollocks", "Pack of lies, of course", "Lies, or they just didn't really know, I'm not sure", "I don't know if they were lying or clueless, or both", "The false security was nice, but didn't last", "This didn't last long", "I wish they'd been truthful from the outset", "The indecision and confusion was the killer", "We just wanted clarity, and got bullshit", "Deep down we knew this was a lie", "We knew this wasn't the truth, I think"],
+    lost:["It was inevitable after that: I #losstype#. I was #lossfeeling#", "Shortly after everything happened I was #lossfeeling# to learn I'd #losstype#", "When I eventually #losstype# it didn't come as a huge surprise, but I was #lossfeeling# of course"],
+    losstype:["was let go", "was furloughed", "didn't have my contract renewed", "didn't get kept on", "had my contract dropped", "was sent home", "was asked not to come in any more", "was axed", "got canned"],
+    lossfeeling:["gutted", "devastated", "really upset", "heartbroken", "crushed", "disappointed"],
+
+    uc:["I'd never needed the benefits system before. I #applied#",
+        "There was little else I could do, and #applied#",
+        "I #applied#",
+        "Never thought I'd see the day when I'd have to swallow my pride - I #applied#",
+        "That's what it's there for, I guess? I #applied#"],
+    applied:["#applicationfeeling# #appliedtext#. #appexperience#"],
+    applicationfeeling:["instantly", "quickly", "immediately", "grudgingly", "speedily"],
+    appliedtext:["applied for Universal Credit", "signed up for UC", "started my application", "joined the UC waiting list", "joined the Universal Credit queue"],
+    appexperience:["It was #difficulty# applying", "Actually getting onto the UC system was #difficulty#", "Applying was #difficulty#"],
+    difficulty:["a nightmare", "a huge hassle", "a slow process", "really hard", "surprisingly straightforward", "not too bad", "okay (I guess)", "a bit fiddly", "very time-consuming"]
 }
