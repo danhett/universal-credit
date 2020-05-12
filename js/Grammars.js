@@ -24,7 +24,7 @@ var times = {
 var generic = {
     origin:[    "#intro# #status#. #fulllocation#. #flavour#.",
                 "#intro# I've #livedin# #actualplace# for #time#. #flavour#.",
-                "#flavour#. I've #livedin# #actualplace# for #time#. #status#."],
+                "I've #livedin# #actualplace# for #time#. #flavour#. #status#."],
 
     intro:["Okay, where do I start...", "This is my story.", "Here's how it is for us.", "This is the short version I suppose:", "Alright well:", "It's the same old story.", "Stop me if you've heard this one before.", "My story isn't too special.", "I'll start at the beginning.", "OK."],
     status:["I'm #maritalstatus# with #kidcount#"],
@@ -34,7 +34,7 @@ var generic = {
     how:["rent", "own", "share", "live in", "currently live in", "just moved into"],
     housetype:["little house", "modest place", "small house", "shitty house", "little flat", "nice little flat", "bedsit", "place", "home", "flat", "apartment", "two up, two down"],
     placedescription:["in the centre of town", "in a small town", "in a quiet village", "near the city", "by the river", "near a busy road", "near my work", "just south of town", "on the outskirts of town", "in the suburbs", "in a nice part of town", "in a nice area", "in a rough area", "on the north side of the city"],
-    actualplace:["Manchester", "London", "Birmingham", "Sheffield", "Glasgow", "Newcastle", "Nottingham", "Liverpool", "Southend", "Bristol", "Edinburgh", "Brighton", "Bradford", "Leicester", "Sunderland", "Belfast", "Portsmouth", "Bournemouth", "Coventry", "Southampton", "Plymouth", "Luton", "Oxford", "Norwich", "York", "Ipswich", "Cambridge", "Bath", "Scarborough", "Huddersfield", "Stretford", "Stockport", "Preston", "Newbury", "Stafford", "Widnes", "Wigan", "Taunton", "Bedford", "Maidstone", "Torquay", "Islington", "Romford", "Ashton", "Derby", "Doncaster", "Newport", "Milton Keynes", "Dagenham", "Slough", "Lincoln", "Bromley", "Hyde", "Tameside", "Rochdale", "Bury", "Bolton", "Salford", "Warrington", "Tameside", "Altrincham", "Irlam", "Marple", "Cheadle", "Harrow", "Grimsby"],
+    actualplace:["Manchester", "Ashton", "Hyde", "Tameside", "Rochdale", "Bury", "Bolton", "Salford", "Warrington", "Tameside", "Altrincham", "Irlam", "Marple", "Cheadle", "Clayton", "Cheetham Hill", "Ancoats", "Trafford", "Hazel Grove", "Blakeley", "Openshaw", "Fairfield", "Gorton", "Dukinfield", "Droylsden", "Stockport", "Reddish", "Burnage", "Heaton Chapel", "Withington", "Didsbury", "Edgeley", "the north west", "the NW"],
     livedin:["lived in", "been a resident of"],
     time:["pfft... forever", "as long as I can remember", "years", "a few months", "a short while", "quite a while now", "a good few years", "a couple of months maybe", "a couple of years perhaps", "quite a long while, I forget exactly", "fucking ages", "far too long", "a short while", "about ten years now, it must be", "most of my life", "my whole life, pretty much", "what feels like forever", "barely any time at all"],
     flavour:["Life #lifefeeling#", "Not much to say really", "I #frequency# feel #feeling# about #stuff#", "Not sure if this matters", "I keep myself to myself", "I'm sociable, outgoing", "I'm a quiet person generally", "Happiest when it's sunny", "Wish it rained less", "Prefer being outdoors", "Quite a social person", "Usually quite busy", "Away from home a lot", "Travel a lot for work", "Bit of a homebody", "Big family person", "Got a big family in the area", "Not from a big family", "Move around a lot"],
@@ -48,7 +48,39 @@ var generic = {
 // grammars for cases pre-pandemic
 //-------------------------------------
 var pre = {
-    origin:["I've been stuck in the universal credit system for a long, long time."]
+    origin:["#longtime#. #why# #reason#. #thoughts#."],
+    longtime:["I've been #stuck# in the universal credit system #forages#", "I'm #stuck#. I've #needed# Universal Credit #forages#"],
+    stuck:["stuck", "trapped", "drowning", "cornered", "conned", "victimised", "tangled up"],
+    needed:["needed", "depended on", "been on", "received", "been getting", "been 'helped' by", "been 'supported' by"],
+    forages:["for a long, long time", "forever", "for years", "as long as I can remember", "since before the #virusname#", "for many years", "since it came in", "for years now", "long before the #virusname#"],
+    virusname:["pandemic", "virus", "coronavirus", "outbreak"],
+    why:["Long story short - ", "Why am I on the system? I'm glad you asked:", "The reason I'm going through this is that", "I'm on the benefits system because", "I didn't want this to happen, but", "How did I get here? Well, ", "So my situation is that", "In short, I'm on UC because", "UC is my only income at the moment because", "I'm being helped by UC because", "I didn't have much choice about going on UC, ", "Did I choose to go on this?! No of course not, ", "What were my options, really? ", "This was my only option: "],
+    reason:["#DISABILITY#. #comment#. #DISNEXT#", "#DEATH#. #comment#. #DEATHNEXT#", "#JOB#. #comment#. #JOBNEXT#", "#CARER#. #comment#. #CARERNEXT#"],
+
+    DISABILITY:["I have a disability", "I'm registered disabled", "I can't work due to a disability", "I can't work, I was injured a few years back and now I'm registered disabled", "I'm off on long term sick, just registered disabled", "My disability means I can't work my old job any more", "I've got severely limited mobility nowadays"],
+    DISNEXT:["#discomment#. #diseffect#. #dissummary#"],
+    discomment:["It's been tough, the whole diability status thing", "Officially I'm in the blue badge gang, my partner still jokes about being in it for the parking", "As of a couple of years ago my long term sick became actual disability status", "Living with any disability is hard, but doing so without proper support in place is really tough", "Knowing what I know about support for the disabled, I can say I'm on of the lucky ones", "Not a new thing, but the ground keeps shifting under me anyway", "I've been disabled for years, initially a mild condition but much more difficult day to day now"],
+    diseffect:["Being in the system means everything got really complicated between UC and the old system", "I'm still struggling with getting the right amount out of UC with the old system still affecting me", "There were a lot of delays and assessments, I didn't know about much of this at the start", "The disability assessor was... it was an experience", "I wouldn't wish the disability testing on anyone", "As soon as I declared my disability on the the system, life got really, really complicated", "Who knew being disabled meant so much fucking paperwork?! Truly amazing", "The system changed, but the way you're tested didn't really", "Nobody told me there'd be an exam to take when I joined disability club, haha - you gotta laugh sometimes, I guess"],
+    dissummary:["As it stands, the support is approaching okay now, but it took forever", "It's taken a while but UC is now sort of working for me", "I'm still struggling with the disability support available", "Constantly having to prove my level of disability is extremely frustrating", "I know I'm one of many people relying on disability help from UC, and not getting it", "I wonder how many disabled UC users haven't been as lucky as me"],
+
+    DEATH:["I lost someone", "my partner passed away recently", "I lost someone close to me"],
+    DEATHNEXT:["#deathcomment#. #deatheffect#. #deathsummary#"],
+    deathcomment:["Now I'm on my own", "Suddenly I was on my own", "Unexpectedly I was suddenly running a house on my own"],
+    deatheffect:["As a lone parent I was supported on the old system and moved over", "I had some help from the old system, initially", "I was switched over to UC after the loss, but still struggle", "Despite still grieving I ended up having to do extra paperwork and attend interviews", "Handling the transition while dealing with everything that comes with losing someone close to you is...", "I didn't even have time to think, the funeral and everything else happened so fast"],
+    deathsummary:["As it stands, the support is approaching okay now, but it took forever", "It's taken a while but UC is now sort of working for me", "I'm still struggling with the support available as a widower", "Constantly having to prove I really did lose some is extremely frustrating", "I know I'm one of many people relying on extra help from UC, and not getting it", "I wonder how many bereaved users haven't been as lucky as me"],
+
+    JOB:["I lost my job", "the company I worked for went tits-up"],
+    JOBNEXT:["The job search never really ends"],
+
+    CARER:["I'm a carer"],
+    CARERNEXT:["I'm so busy looking after others, I'm losing out on care myself"],
+
+    comment:["There's not much anyone can do really", "Soldiering on, though", "Never boring this life, is it", "None of this was part of the plan", "All of this caught me by surprise", "The whole thing is a nightmare", "My story is the same as a lot of others, I suspect", "Not exactly ideal, no", "A long way from what I had in mind for my life, that's for sure", "Sometimes I wonder how I even got here"],
+
+    thoughts:["#systemthoughts#. #pandemicthoughts#. #summary#"],
+    systemthoughts:["The system is rigged", "The whole thing has failed - failed people like me, and failed millions of others", "This is it, is it? This is our national support now?", "We've all been struggling for so long", "It just feels so desperately unfair", "It isn't fair, it's like playing an unwinnable game sometimes", "The whole system sounds so great on paper, but experiences like mine are the reality", "My story isn't even close to unique, either", "It's just heartbreakingly unfair", "UC exists to support us, and it isn't doing, at all"],
+    pandemicthoughts:["I heard millions more people are on the system now, due to the #virusname# - I can't imagine what strain this will put everyone under", "Of course the #virusname# means millions more users on the system, I can't even get onto it some days", "I don't begrudge any of the pandemic users their need for it, but it's exposing this stuff to a lot of people", "Silver lining is that perhaps the millions of people suddenly using UC will maybe cause some change", "This is what we've dealt with for years, and now thousands, millions even, are being pushed into the system too"],
+    summary:["I wouldn't wish this on anyone", "It's slowly improving, but there's a long, long way to go", "The old system wasn't great, but it was much more fair to people in my situation", "My situation hasn't changed, but the system that supports me has - it isn't fair"]
 }
 
 //-------------------------------------
@@ -96,6 +128,14 @@ var post = {
     applied:["#applicationfeeling# #appliedtext#. #appexperience#"],
     applicationfeeling:["instantly", "quickly", "immediately", "grudgingly", "speedily"],
     appliedtext:["applied for Universal Credit", "signed up for UC", "started my application", "joined the UC waiting list", "joined the Universal Credit queue"],
-    appexperience:["It was #difficulty# applying", "Actually getting onto the UC system was #difficulty#", "Applying was #difficulty#"],
-    difficulty:["a nightmare", "a huge hassle", "a slow process", "really hard", "surprisingly straightforward", "not too bad", "okay (I guess)", "a bit fiddly", "very time-consuming"]
+    appexperience:["It was #difficulty# applying - #systems#", "Actually getting onto the UC system was #difficulty#... #systems#", "Applying was #difficulty# - #systems#"],
+    difficulty:["a nightmare", "a huge hassle", "a slow process", "really hard", "surprisingly straightforward", "a bit fiddly", "very time-consuming"],
+    systems:["#phone#, #website#. #assessment#, #outcome#", "#phone#, #website#. #identity#. #assessment#, #outcome#"],
+    phone:["the waiting time on the phone was hours and hours", "I sat on the phone for hours and was cut off", "I never even got through on the phone", "the phone lines were jammed for days", "I spent all day on hold", "They never picked up the phone"],
+    website:["but the website just about worked", "but I got it sorted online finally", "so I had to do it on the computer, which I'm bad at", "so I was stuck using the website, I found it hard to understand", "so I had to get help using the website", "and in the end I gave up and used the website"],
+    identity:["The hardest part was proving my identity, the systems are horrible", "It took so long to put my documentation in and prove who I was", "I can't use a computer very well, and had to get help uploading my documents", "They needed all my documents and things, but I've only got a crappy smartphone", "The way you send proof and stuff in was really hard to use"],
+    assessment:["The #virusname# means they aren't checking income much", "My assessment was short and pretty rough", "I was rushed through the system", "The assessment was very short, almost non-existent", "I barely answered any questions"],
+    outcome:["#over#, #surprise#"],
+    over:[ "it was over pretty quick", "and once they had my info it turned out there was over a month to wait!!! I couldn't believe it", "what I didn't know was that there was weeks and weeks to wait afterwards", "I didn't know about the delays or the waiting"],
+    surprise:["I had no idea it was this bad", "no idea what I'm supposed to do until then"]
 }

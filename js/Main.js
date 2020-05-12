@@ -19,8 +19,6 @@ const timegrammar = tracery.createGrammar(times);
 const pregrammar = tracery.createGrammar(pre);
 const postgrammar = tracery.createGrammar(post);
 
-// create the grammar and first text update
-
 doUpdate();
 
 // listeners for updates
@@ -31,11 +29,9 @@ document.onclick= function(event) {
 function doUpdate() {
     headerfx.setText(headergrammar.flatten("#origin#"));
 
-    // 2.8 mill + 1.4 mill = 4.2 mill total
+    // rough stats: 2.8 mill existing users + 1.4 mill pandemic additions = 4.2 mill total
 
-    var test = Math.random();
-    console.log(test * 4.2);
-    if(test * 4.2 < 2.8) {
+    if((Math.random() * 4.2) < 2.8) {
         introfx.setText(genericgrammar.flatten("#origin#"));
         storyfx.setText(pregrammar.flatten("#origin#"));
         subfx.setText(timegrammar.flatten("#long#"));
