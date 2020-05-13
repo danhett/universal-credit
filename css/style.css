@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Roboto+Mono:100';
+@import 'https://fonts.googleapis.com/css?family=Roboto+Mono:wght@700&display=swap';
 html,
 body {
   font-family: 'Roboto Mono', monospace;
@@ -18,16 +18,18 @@ body {
   width:80%;
   padding-left: 50px;
   color: #fafafa;
+  line-height: 1.6em;
 }
 .storytext {
   font-size: 1.2em;
   width:80%;
   padding-left: 50px;
   color: #fafafa;
+  line-height: 1.6em;
 }
 .headertext {
   font-weight: 100;
-  font-size: 1.5em;
+  font-size: 1.9em;
   padding-left: 50px;
   width:100%;
   color: #fafafa;
@@ -37,14 +39,14 @@ body {
   font-size: 1.2em;
   width:80%;
   padding-left: 50px;
-  color: #00EEEE;
+  color: #cccccc;
 }
 .textHolder {
     position: fixed;
     left: 30px;
 }
 .dud {
-    color: #FF2222;
+    color: #00EEEE;
 }
 #particlesholder {
     position: absolute;

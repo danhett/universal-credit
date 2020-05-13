@@ -1,6 +1,6 @@
-particlesJS.load('particlesholder', 'particles.json', function() {
-  console.log('callback - particles.js config loaded');
-});
+//particlesJS.load('particlesholder', 'particles.json', function() {
+  //console.log('callback - particles.js config loaded');
+//});
 
 const headertext = document.querySelector('.headertext')
 const headerfx = new TextScramble(headertext)
