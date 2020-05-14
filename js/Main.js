@@ -1,6 +1,6 @@
-//particlesJS.load('particlesholder', 'particles.json', function() {
-  //console.log('callback - particles.js config loaded');
-//});
+particlesJS.load('particlesholder', 'particles.json', function() {
+  console.log('callback - particles.js config loaded');
+});
 
 const headertext = document.querySelector('.headertext')
 const headerfx = new TextScramble(headertext)
@@ -19,7 +19,14 @@ const timegrammar = tracery.createGrammar(times);
 const pregrammar = tracery.createGrammar(pre);
 const postgrammar = tracery.createGrammar(post);
 
-doUpdate();
+doInitialSetup();
+
+function doInitialSetup() {
+    headerfx.setText("/////////// it feels like they don't want us to survive");
+    subfx.setText("//////// a work of generative fiction by dan hett<br>///// created as part of the gmca covid-19 microcommission project");
+
+    introfx.setText("This site generates fictional stories reflecting the experiences of people trapped within the Universal Credit system. <br><br>Approximately 1.5 million people signed up for Universal Credit during the global Coronavirus pandemic, adding to the 2.8 million existing users that have passed through the system since it's inception with the Welfare Reform Act in 2012.<br><br>Although fictional, these stories aim to echo the reality of the millions of people currently being let down by the UC system and the DWP. I'd like to thank the many many people who reached out to share their stories and experiences with me, without whom this project could not exist.<br><br><b>Click anywhere</b>.");
+}
 
 // listeners for updates
 document.onclick= function(event) {

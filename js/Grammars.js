@@ -71,9 +71,9 @@ var pre = {
 
     JOB:["I lost my job", "the company I worked for went tits-up", "my employer folded, and that was it", "I was made redundant a while ago, quite unexpectedly", "the place I worked at suddenly closed", "I was part of a huge wave of redundancies at work", "I was let go during some 'downsizing' at work", "I was made redundant", "my employer went bankrupt and closed", "my job was unceremoniously cut", "I was let go when my employer moved location"],
     JOBNEXT:["#jobhow#. #jobprocess#. #jobsummary#"],
-    jobhow:[],
-    jobprocess:[],
-    jobsummary:[],
+    jobhow:["The line of work I'm in is a bit fraught at the moment. Caught a lot of people by surprise", "One minute we were open and trading, the next we weren't", "The whole place went from bustling to shut within a fortnight, really hard seeing it happen", "Sadly our company's owners decided it'd be cheaper to up sticks and move, so they did - yeah, cheers", "The work had been tailing off for a while, but it still seemed to catch everyone off-guard"],
+    jobprocess:["Being on UC for unemployment has been pretty stressful", "Although UC is supporting me through the jobseeking process, they don't half make it hard work, christ", "To be honest I'm not sure if the hoops I've had to jump through have been worth it really", "Constantly having to check in about my jobseeking status is frustrating, the slightest deviation and the money stops - and I mean the tiniest little thing", "I've had my money stopped a few times for being late for appointments, which is a bit harsh - I don't drive and was assigned a centre a long way away", "They're supposedly helping, but the pressure you're under when the money mitght get cut off for the slightest thing is really unfair"],
+    jobsummary:["Since losing my main job I've had a couple of things crop up, things are looking better", "Things have improved a bit for me, which is lucky given how much of a tangle this whole thing was", "At least I'm back in a gig now, not ideal but I'll take what I can get at the moment", "I've managed to get back on the ladder, hopefully permanently; what a shitshow though"],
 
     CARER:["I'm a carer"],
     CARERNEXT:["I'm so busy looking after others, I'm losing out on care myself"],
